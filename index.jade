@@ -1,0 +1,59 @@
+!!!html
+html
+  head
+    title JEPSO CI STATIC
+    link(href='/style.css', rel='stylesheet')
+    link(href='https://yandex.st/highlightjs/7.3/styles/default.min.css', rel='stylesheet')
+  body
+    #color-bar
+    .content
+      h1 JEPSO-CI Static
+      p.
+        Welcome to JEPSO-CI's static server.  It hosts JavaScript files and Stylesheets.  That may be useful when constructing your tests.
+      p.
+        It's perfectly fine to directly reference the scripts on here, the advantage of which is that you get to always have the latest versions of all of them.  Alternatively, you can download them locally so they work even offline.
+      p.
+        The website is also fully https so you can use it without worrying about running into annoying cerficiate issues.
+      p.
+        The files are not minified, and will not be minified as it simplifies debugging.
+      h2 Test Harnesses & Adapters
+      h3 Mocha
+      p
+        | Mocha is an extensive and powerful test framework built for node.js and the browser.  You can see documentation for it 
+        a(href='http://visionmedia.github.com/mocha/') here
+        | .  To use it with 
+        a(href='https://jepso-ci.com') jepso-ci
+        |  you'll need the following three files.
+      ul
+        li
+          a(href='https://static.jepso-ci.com/adapters/mocha.js').
+            https://static.jepso-ci.com/adapters/mocha.js
+        li
+          a(href='https://static.jepso-ci.com/harnesses/mocha/mocha.js').
+            https://static.jepso-ci.com/harnesses/mocha/mocha.js
+        li
+          a(href='https://static.jepso-ci.com/harnesses/mocha/mocha.css').
+            https://static.jepso-ci.com/harnesses/mocha/mocha.css
+      p.
+        To get started, you might want to try this as your html template:
+      :html
+        <!doctype html>
+        <html>
+        <head>
+          <meta charset="utf-8">
+          <title>Mocha Tests</title>
+          <link rel="stylesheet" href="https://static.jepso-ci.com/harnesses/mocha/mocha.css" />
+        </head>
+        <body>
+          <div id="mocha"></div>
+          <script src="https://static.jepso-ci.com/harnesses/mocha/mocha.js"></script>
+          <script src="https://static.jepso-ci.com/adapters/mocha.js"></script>
+          <script src="tests.js"></script>
+          <script>mocha.run();</script>
+        </body>
+        </html>
+      h2 Adding Your Own Farmework
+      p
+        | If you have a framework or useful tool for JavaScript testing you feel should be on this list, submit a pull request 
+        a(href='https://github.com/jepso-ci/static.jepso-ci.com') here
+        | .

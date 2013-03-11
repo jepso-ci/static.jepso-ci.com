@@ -1,0 +1,25 @@
+body, html {
+  font-family: Helvetica;
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+}
+.content {
+  padding: 50px;
+  max-width: 950px;
+  margin: auto;
+}
+#color-bar {
+  background: #c00080;
+  height: 20px;
+  margin: 0px;
+}
+
+a {
+  color: #c00080;
+  text-decoration: none;
+}
+a:hover {
+  color: #c00080;
+  text-decoration: underline;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "static.jepso-ci.com",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "jade": "~0.28.2",
+    "highlight.js": "~7.3.0"
+  },
+  "scripts": {
+    "build": "node build.js"
+  }
+}
